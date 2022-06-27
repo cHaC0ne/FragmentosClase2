@@ -2,6 +2,9 @@ package com.example.fragmentsclase2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.text.TextUtils.replace
+import androidx.fragment.app.Fragment
 import com.example.fragmentsclase2.databinding.ActivitySecondBinding
 import myFragments.cuartoFrag
 import myFragments.quintoFrag
@@ -16,20 +19,55 @@ class SecondActivity : AppCompatActivity() {
         val frag3 = tercerFrag() //lleva () porque estoy llamando a una clase
         val frag4 = cuartoFrag()
         val frag5 = quintoFrag()
-       b.b3frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {    //esta es la manera de hacer que cambie cada vez que pulso su boton
-            replace(R.id.fCV, frag3)
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fCV,frag3)
+            //Añade el fragmento a la pila de actividad
             addToBackStack(null)
             commit()
-        }}
-        b.b4Frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fCV, frag4)
+        }
+        b.b3frag.setOnClickListener { setFragmentAnim(frag3) }
+        b.b4Frag.setOnClickListener { setFragmentAnim(frag4) }
+        b.b5frag.setOnClickListener { setFragmentAnim(frag5) }
+
+//       b.b3frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {    //esta es la manera de hacer que cambie cada vez que pulso su boton
+//            replace(R.id.fCV, frag3)
+//            addToBackStack(null)
+//            commit()
+//        }}
+//        b.b4Frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {
+//            replace(R.id.fCV, frag4)
+//            addToBackStack(null)
+//            commit()
+//        }}
+//        b.b5frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {
+//            replace(R.id.fCV, frag5)
+//            addToBackStack(null)
+//            commit()
+//        }}
+    }
+    fun setFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply { //FUncion para no tener que poner todo lo que he comentado arriba
+            replace(R.id.fCV, fragment)
+            //Añade añade el fragmento a la pila de actividad
             addToBackStack(null)
             commit()
-        }}
-        b.b5frag.setOnClickListener {   supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fCV, frag5)
-            addToBackStack(null)
-            commit()
-        }}
+        }
+    }
+
+    fun setFragmentAnim(fragment: Fragment){
+        supportFragmentManager
+            .beginTransaction()
+            .addToBackStack(null)
+            .setCustomAnimations(
+                R.anim.slide_in, // enter
+                R.anim.fade_out, // exit
+                R.anim.fade_in,  // popEnter
+                R.anim.slide_out // popExit
+            )
+            .replace(R.id.fCV,fragment)
+            .commit()
     }
 }
+
+
