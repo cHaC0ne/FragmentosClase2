@@ -1,9 +1,11 @@
 package com.example.fragmentsclase2
 
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils
-import android.text.TextUtils.replace
+import android.view.View
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.example.fragmentsclase2.databinding.ActivitySecondBinding
 import myFragments.cuartoFrag
@@ -67,6 +69,13 @@ class SecondActivity : AppCompatActivity() {
             )
             .replace(R.id.fCV,fragment)
             .commit()
+    }
+//    fun onClickDialog(view: View){
+//        DialogFragment().show(supportFragmentManager, DialogFragment.TAG)
+//    }
+    fun clickNext(view: View){
+        val intent = Intent(this, ThirdActivity::class.java)
+        startActivity(intent)
     }
 }
 
