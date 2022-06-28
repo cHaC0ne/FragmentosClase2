@@ -1,14 +1,17 @@
 package myFragments
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.DialogFragment
 import com.example.fragmentsclase2.R
 
-class DialogFragment : DialogFragment() {
+class MiDialogFragment : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,11 +26,11 @@ class DialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return AlertDialog.Builder(context!!)
-            .setMessage(R.string.dialogo_confirmar_borrado)
-            .setPositiveButton(R.string.Aceptar) { dialog, id ->
+            .setMessage("Borrar")
+            .setPositiveButton("Aceptar") { dialog, id ->
                 Toast.makeText(this.context, "Has borrado datos", Toast.LENGTH_SHORT).show()
             }
-            .setNegativeButton(R.string.Cancelar){ dialog, id ->
+            .setNegativeButton("Cancelar"){ dialog, id ->
                 Toast.makeText(this.context, "Has cancelado el borrado", Toast.LENGTH_SHORT).show()
             }
             .create()

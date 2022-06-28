@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentosClase2/app/src/main/res/drawable/ic_coppy.xml" value="0.14" />
+        <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentosClase2/app/src/main/res/drawable/ic_cortar.xml" value="0.14" />
+        <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentosClase2/app/src/main/res/drawable/ic_paste.xml" value="0.14" />
+        <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentosClase2/app/src/main/res/layout/fragment_quinto.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentosClase2/app/src/main/res/menu/menufrg3.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentsClase2/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentsClase2/app/src/main/res/layout/activity_second.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Alumno/AndroidStudioProjects/FragmentsClase2/app/src/main/res/layout/fragment_cuarto.xml" value="0.36666666666666664" />
