@@ -17,7 +17,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"
-            android:name="myFragments.primerFrag"
+            android:name="com.example.fragmentsclase2.myFragments.primerFrag"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -25,7 +25,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView2"
-            android:name="myFragments.segundoFrag"
+            android:name="com.example.fragmentsclase2.myFragments.segundoFrag"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

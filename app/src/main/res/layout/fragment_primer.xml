@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myFragments.primerFrag"
+    tools:context="com.example.fragmentsclase2.myFragments.primerFrag"
     android:background="#8A96DF">
 
     <!-- TODO: Update blank fragment layout -->

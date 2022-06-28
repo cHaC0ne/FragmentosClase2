@@ -1,6 +1,7 @@
 package com.example.fragmentsclase2
 
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,9 +9,12 @@ import android.view.View
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import com.example.fragmentsclase2.databinding.ActivitySecondBinding
-import myFragments.cuartoFrag
-import myFragments.quintoFrag
-import myFragments.tercerFrag
+import com.example.fragmentsclase2.myFragments.DialogFrag
+
+
+import com.example.fragmentsclase2.myFragments.cuartoFrag
+import com.example.fragmentsclase2.myFragments.quintoFrag
+import com.example.fragmentsclase2.myFragments.tercerFrag
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var b: ActivitySecondBinding
@@ -48,14 +52,14 @@ class SecondActivity : AppCompatActivity() {
 //            commit()
 //        }}
     }
-    fun setFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply { //FUncion para no tener que poner todo lo que he comentado arriba
-            replace(R.id.fCV, fragment)
-            //Añade añade el fragmento a la pila de actividad
-            addToBackStack(null)
-            commit()
-        }
-    }
+//    fun setFragment(fragment: Fragment) {
+//        supportFragmentManager.beginTransaction().apply { //FUncion para no tener que poner todo lo que he comentado arriba
+//            replace(R.id.fCV, fragment)
+//            //Añade añade el fragmento a la pila de actividad
+//            addToBackStack(null)
+//            commit()
+//        }
+//    }
 
     fun setFragmentAnim(fragment: Fragment){
         supportFragmentManager
@@ -70,9 +74,10 @@ class SecondActivity : AppCompatActivity() {
             .replace(R.id.fCV,fragment)
             .commit()
     }
-//    fun onClickDialog(view: View){
-//        DialogFragment().show(supportFragmentManager, DialogFragment.TAG)
-//    }
+    fun onClickDialog(view: View){
+        DialogFragment().show(supportFragmentManager, DialogFrag.TAG)
+    }
+
     fun clickNext(view: View){
         val intent = Intent(this, ThirdActivity::class.java)
         startActivity(intent)
